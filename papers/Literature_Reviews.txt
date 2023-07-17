@@ -3,3 +3,19 @@ H. He and E. A. Garcia, "Learning from Imbalanced Data," in IEEE Transactions on
 	 Sept. 2009, doi: 10.1109/TKDE.2008.239.
 
 
+
+
+
+-- TO BE REVIEWED:
+
+G.M. Weiss and F. Provost, "The Effect of Class Distribution on Classifier Learning: An Empirical Study", 2001.
+
+J. Laurikkala, "Improving Identification of Difficult Small Classes by Balancing Class Distribution", Proc. Conf. AI in Medicine in Europe: Artificial Intelligence Medicine, pp. 63-66, 2001.
+
+A. Estabrooks, T. Jo and N. Japkowicz, "A Multiple Resampling Method for Learning from Imbalanced Data Sets", Computational Intelligence, vol. 20, pp. 18-36, 2004.
+
+C. Drummond and R.C. Holte, "C4.5 Class Imbalance and Cost Sensitivity: Why Under Sampling Beats Over-Sampling", Proc. Int’l Conf. Machine Learning Workshop Learning from Imbalanced Data Sets II, 2003.
+
+X.Y. Liu, J. Wu and Z.H. Zhou, "Exploratory Under Sampling for Class Imbalance Learning", Proc. Int’l Conf. Data Mining, pp. 965-969, 2006.
+
+J. Zhang and I. Mani, "KNN Approach to Unbalanced Data Distributions: A Case Study Involving Information Extraction", Proc. Int’l Conf. Machine Learning (ICML ’2003) Workshop Learning from Imbalanced Data Sets, 2003.
