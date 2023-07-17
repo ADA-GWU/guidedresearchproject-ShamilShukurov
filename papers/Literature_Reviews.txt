@@ -1,0 +1,5 @@
+https://ieeexplore.ieee.org/abstract/document/5128907
+H. He and E. A. Garcia, "Learning from Imbalanced Data," in IEEE Transactions on Knowledge and Data Engineering, vol. 21, no. 9, pp. 1263-1284,
+	 Sept. 2009, doi: 10.1109/TKDE.2008.239.
+
+
