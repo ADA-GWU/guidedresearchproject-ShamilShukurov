@@ -19,3 +19,5 @@ C. Drummond and R.C. Holte, "C4.5 Class Imbalance and Cost Sensitivity: Why Unde
 X.Y. Liu, J. Wu and Z.H. Zhou, "Exploratory Under Sampling for Class Imbalance Learning", Proc. Int’l Conf. Data Mining, pp. 965-969, 2006.
 
 J. Zhang and I. Mani, "KNN Approach to Unbalanced Data Distributions: A Case Study Involving Information Extraction", Proc. Int’l Conf. Machine Learning (ICML ’2003) Workshop Learning from Imbalanced Data Sets, 2003.
+
+ G.M. Weiss and F. Provost, "Learning When Training Data Are Costly: The Effect of Class Distribution on Tree Induction", J. Artificial Intelligence Research, vol. 19, pp. 315-354, 2003.

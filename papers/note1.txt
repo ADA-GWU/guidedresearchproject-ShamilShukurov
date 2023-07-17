@@ -1,0 +1,26 @@
+We believe that this fundamental question should be investigated with greater intensity both theoretically and empirically in order to thoroughly understand the essence of imbalanced learning problems. More specifically, we believe that the following questions require careful and thorough investigation:
+
+    What kind of assumptions will make imbalanced learning algorithms work better compared to learning from the original distributions?
+
+    To what degree should one balance the original data set?
+
+    How do imbalanced data distributions affect the computational complexity of learning algorithms?
+
+    What is the general error bound given an imbalanced data distribution?
+
+    Is there a general theoretical methodology that can alleviate the impediment of learning from imbalanced data sets for specific algorithms and application domains?
+
+Fortunately, we have noticed that these critical fundamental problems have attracted growing attention in the community. 
+For instance, important works are presented in [37] and [24] that directly relate to the aforementioned question 2 regarding 
+the “level of the desired degree of balance.” In [37], the rate of oversampling and undersampling was discussed as a possible aid for
+ imbalanced learning. Generally speaking, though the resampling paradigm has had successful cases in the community, 
+tuning these algorithms effectively is a challenging task. To alleviate this challenge, Estabrooks et al. [37] suggested that a 
+combination of different expressions of resampling methods may be an effective solution to the tuning problem. Weiss and Provost [24] 
+have analyzed, for a fixed training set size, the relationship between the class distribution of training data 
+(expressed as the percentage of minority class examples) and classifier performance in terms of accuracy and AUC. 
+This work provided important suggestions regarding “how do different training data class distributions affect classification performance” 
+and “which class distribution provides the best classifier” [24]. 
+Based on a thorough analysis of 26 data sets, 
+it was suggested that if accuracy is selected as the performance criterion, 
+the best class distribution tends to be near the naturally occurring class distribution. However, 
+if the AUC is selected as the assessment metric, then the best class distribution tends to be near the balanced class distribution. 
