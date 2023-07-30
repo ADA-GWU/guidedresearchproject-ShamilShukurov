@@ -1,0 +1,14 @@
+,Dataset_Name,Row_Count,Minority_Class_Percent,Target_Column
+0,Abalone,1477,4.52,target
+1,Adult,32561,24.08,target
+2,Churn,7043,26.53,target
+3,Contraceptive,1743,22.6,target
+4,Covertype,581012,14.77,target
+5,Fraud,284807,0.172,Class
+6,Fraud2,650000,0.5,is_fraud
+7,Letter-a,20000,3.94,letter_a
+8,Letter-vowel,20000,19.39,is_vowel
+9,Pendigits,10992,9.59,is_9
+10,Sick_euthyroid,2194,10.05,target
+11,Splice-junction,3186,24.07,target
+12,Wine,6497,3.76,target
