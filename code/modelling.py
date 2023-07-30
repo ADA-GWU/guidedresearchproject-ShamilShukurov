@@ -112,6 +112,9 @@ def smote_lgbm(df_train:pd.DataFrame,
                dataset_name:str,
                model_name:str="SMOTE LGBM",
                message:str="Building SMOTE LGBM Model..."):
+    # Train data
+    X_train = df_train.drop(columns=target_col)
+    y_train = df_train[target_col]
     print("SMOTE is being applied...")
     # Resampling the minority class. The strategy can be changed as required.
     sm = SMOTE(sampling_strategy='minority', random_state=42)
