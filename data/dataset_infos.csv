@@ -5,7 +5,7 @@
 3,Contraceptive,1743,22.6,target
 4,Covertype,581012,14.77,target
 5,Fraud,284807,0.172,Class
-6,Fraud2,650000,0.5,is_fraud
+6,Fraud2,250000,0.5,is_fraud
 7,Letter-a,20000,3.94,letter_a
 8,Letter-vowel,20000,19.39,is_vowel
 9,Pendigits,10992,9.59,is_9
