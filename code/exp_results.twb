@@ -495,7 +495,7 @@
     </worksheet>
   </worksheets>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' name='fraud_auc'>
+    <window class='worksheet' maximized='true' name='fraud_auc'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -559,7 +559,7 @@
       </viewpoint>
       <simple-id uuid='{85915B02-1E09-4B1D-A272-FCED9BF0338A}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 3'>
+    <window class='worksheet' name='Sheet 3'>
       <cards>
         <edge name='left'>
           <strip size='160'>
