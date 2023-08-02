@@ -312,6 +312,12 @@
           </style-rule>
           <style-rule element='cell'>
             <format attr='width' field='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:Model:nk]' value='35' />
+            <format attr='font-weight' data-class='subtotal' value='bold' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Book' />
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='bold' />
           </style-rule>
         </style>
         <panes>
@@ -367,6 +373,10 @@
           <style-rule element='cell'>
             <format attr='width' field='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:minority_percent:ok]' value='134' />
           </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#555555' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
         </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
@@ -414,6 +424,10 @@
         <style>
           <style-rule element='cell'>
             <format attr='width' field='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:Model:nk]' value='35' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
           </style-rule>
         </style>
         <panes>
@@ -517,6 +531,10 @@
           <style-rule element='cell'>
             <format attr='width' field='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:Model:nk]' value='35' />
           </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
+          </style-rule>
         </style>
         <panes>
           <pane id='7' selection-relaxation-option='selection-relaxation-allow'>
@@ -571,6 +589,9 @@
         <style>
           <style-rule element='cell'>
             <format attr='width' field='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:minority_percent:ok]' value='134' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
           </style-rule>
         </style>
         <panes>
@@ -668,11 +689,13 @@
             <column-instance column='[minority_percent]' derivation='None' name='[none:minority_percent:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Calculation_322007427061571584]' derivation='Sum' name='[sum:Calculation_322007427061571584:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <computed-sort column='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:Model:nk]' direction='ASC' using='[federated.1vo68gw072vodh120zn0v0rm7dkl].[sum:Calculation_322007427061571584:qk]' />
           <filter class='quantitative' column='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:f1_test:qk]' included-values='in-range'>
             <min>0.001</min>
             <max>0.75060460616884328</max>
           </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:Model:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1vo68gw072vodh120zn0v0rm7dkl].[sum:Calculation_322007427061571584:qk]' shelf='rows' />
+          </shelf-sorts>
           <slices>
             <column>[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:f1_test:qk]</column>
           </slices>
@@ -681,6 +704,10 @@
         <style>
           <style-rule element='cell'>
             <format attr='width' field='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:Model:nk]' value='35' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
           </style-rule>
         </style>
         <panes>
@@ -771,14 +798,14 @@
       </devicelayouts>
       <simple-id uuid='{61CC79D6-0E52-41DA-89B4-9AF20C7284D9}' />
     </dashboard>
-    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 2'>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1 (2)'>
       <style />
       <size sizing-mode='automatic' />
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98142' id='7' param='horz' type-v2='layout-flow' w='99034' x='483' y='929'>
-            <zone fixed-size='820' h='98142' id='5' is-fixed='true' type-v2='layout-basic' w='49487' x='483' y='929'>
-              <zone h='98142' id='3' name='AUC_Line' w='49487' x='483' y='929'>
+            <zone h='98142' id='5' type-v2='layout-basic' w='89378' x='483' y='929'>
+              <zone h='98142' id='3' name='F1_Bar (2)' show-title='false' w='89378' x='483' y='929'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -787,14 +814,68 @@
                 </zone-style>
               </zone>
             </zone>
-            <zone h='98142' id='9' name='F1_Line' w='49544' x='49970' y='929'>
-              <layout-cache type-h='fixed' type-w='cell' />
+            <zone fixed-size='160' h='98142' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='9656' x='89861' y='929'>
+              <zone h='18118' id='8' name='F1_Bar (2)' pane-specification-id='7' param='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:Model:nk]' type-v2='color' w='9656' x='89861' y='929'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
                 <format attr='border-width' value='0' />
-                <format attr='margin' value='4' />
+                <format attr='margin' value='8' />
               </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1FE0D367-A30C-4134-9120-8A30A6AE6553}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98142' id='10' param='horz' type-v2='layout-flow' w='99034' x='483' y='929'>
+            <zone h='98142' id='7' param='horz' type-v2='layout-flow' w='99034' x='483' y='929'>
+              <zone fixed-size='820' h='98142' id='5' is-fixed='true' type-v2='layout-basic' w='99034' x='483' y='929'>
+                <zone h='98142' id='3' name='AUC_Line' w='49515' x='483' y='929'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='98142' id='8' name='F1_Line' w='49519' x='49998' y='929'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
             </zone>
           </zone>
           <zone-style>
@@ -822,6 +903,59 @@
         </devicelayout>
       </devicelayouts>
       <simple-id uuid='{85D4492E-D0BC-4CF8-AB35-2915B06A4091}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98142' id='7' param='horz' type-v2='layout-flow' w='99034' x='483' y='929'>
+            <zone h='98142' id='5' type-v2='layout-basic' w='89378' x='483' y='929'>
+              <zone h='98142' id='3' name='ov_index' show-title='false' w='89378' x='483' y='929'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98142' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='9656' x='89861' y='929'>
+              <zone h='18118' id='8' name='ov_index' pane-specification-id='7' param='[federated.1vo68gw072vodh120zn0v0rm7dkl].[none:Model:nk]' type-v2='color' w='9656' x='89861' y='929'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{AAD06B3B-5863-460C-A457-97BDD484902E}' />
     </dashboard>
   </dashboards>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
@@ -915,7 +1049,7 @@
       </viewpoint>
       <simple-id uuid='{F0557A06-9DAB-426E-AC58-7AF21B9D56B8}' />
     </window>
-    <window class='worksheet' maximized='true' name='ov_index'>
+    <window class='worksheet' name='ov_index'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -999,7 +1133,7 @@
       </cards>
       <simple-id uuid='{6ABB95C8-D7E5-4922-8D03-18E0B99A9D83}' />
     </window>
-    <window class='dashboard' name='Dashboard 1'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='F1_Bar'>
           <zoom type='entire-view' />
@@ -1007,6 +1141,15 @@
       </viewpoints>
       <active id='-1' />
       <simple-id uuid='{DC344F66-2E7A-43A3-87A9-8366247CE7D3}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1 (2)'>
+      <viewpoints>
+        <viewpoint name='F1_Bar (2)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+      <simple-id uuid='{DAE91E3B-8C6E-4B25-840F-813C2631C7C8}' />
     </window>
     <window class='dashboard' name='Dashboard 2'>
       <viewpoints>
@@ -1042,6 +1185,15 @@
         </edge>
       </cards>
       <simple-id uuid='{2175CAA5-850E-462D-82CF-0B4272C67472}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='ov_index'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{A56B7735-28A7-46E2-8517-5265608963BE}' />
     </window>
   </windows>
 </workbook>
