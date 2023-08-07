@@ -11,6 +11,7 @@
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
   <preferences>
@@ -448,25 +449,31 @@
             <column datatype='string' name='[Model]' role='dimension' type='nominal' />
             <column caption='F1 Test' datatype='real' name='[f1_test]' role='measure' type='quantitative' />
             <column caption='F1 Train' datatype='real' name='[f1_train]' role='measure' type='quantitative' />
+            <column-instance column='[f1_train]' derivation='Max' name='[max:f1_train:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Dataset]' derivation='None' name='[none:Dataset:nk]' pivot='key' type='nominal' />
             <column-instance column='[Model]' derivation='None' name='[none:Model:nk]' pivot='key' type='nominal' />
             <column-instance column='[f1_test]' derivation='Sum' name='[sum:f1_test:qk]' pivot='key' type='quantitative' />
             <column-instance column='[f1_train]' derivation='Sum' name='[sum:f1_train:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.167juq30we47o81cxcvvu14y3cbj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_test:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_train:qk]&quot;' />
+            </groupfilter>
+          </filter>
           <filter class='categorical' column='[federated.167juq30we47o81cxcvvu14y3cbj].[none:Dataset:nk]'>
             <groupfilter function='member' level='[none:Dataset:nk]' member='&quot;Fraud&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.167juq30we47o81cxcvvu14y3cbj].[none:Model:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_test:qk]' shelf='columns' />
-          </shelf-sorts>
+          <computed-sort column='[federated.167juq30we47o81cxcvvu14y3cbj].[none:Model:nk]' direction='DESC' using='[federated.167juq30we47o81cxcvvu14y3cbj].[max:f1_train:qk]' />
           <slices>
             <column>[federated.167juq30we47o81cxcvvu14y3cbj].[none:Dataset:nk]</column>
+            <column>[federated.167juq30we47o81cxcvvu14y3cbj].[:Measure Names]</column>
           </slices>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='width' field='[federated.167juq30we47o81cxcvvu14y3cbj].[none:Model:nk]' value='164' />
+            <format attr='width' field='[federated.167juq30we47o81cxcvvu14y3cbj].[:Measure Names]' value='88' />
           </style-rule>
         </style>
         <panes>
@@ -476,50 +483,13 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <text column='[federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_test:qk]' />
+              <color column='[federated.167juq30we47o81cxcvvu14y3cbj].[:Measure Names]' />
+              <text column='[federated.167juq30we47o81cxcvvu14y3cbj].[Multiple Values]' />
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='mark-labels-cull' value='true' />
                 <format attr='mark-labels-show' value='true' />
-              </style-rule>
-              <style-rule element='pane'>
-                <format attr='minwidth' value='-1' />
-                <format attr='maxwidth' value='-1' />
-              </style-rule>
-            </style>
-          </pane>
-          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_test:qk]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-            <encodings>
-              <text column='[federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_test:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
                 <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-show' value='true' />
-              </style-rule>
-              <style-rule element='pane'>
-                <format attr='minwidth' value='-1' />
-                <format attr='maxwidth' value='-1' />
-              </style-rule>
-            </style>
-          </pane>
-          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_train:qk]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-            <encodings>
-              <text column='[federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_test:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-show' value='true' />
               </style-rule>
               <style-rule element='pane'>
                 <format attr='minwidth' value='-1' />
@@ -528,14 +498,14 @@
             </style>
           </pane>
         </panes>
-        <rows>([federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_test:qk] + [federated.167juq30we47o81cxcvvu14y3cbj].[sum:f1_train:qk])</rows>
-        <cols>[federated.167juq30we47o81cxcvvu14y3cbj].[none:Model:nk]</cols>
+        <rows>[federated.167juq30we47o81cxcvvu14y3cbj].[Multiple Values]</rows>
+        <cols>([federated.167juq30we47o81cxcvvu14y3cbj].[none:Model:nk] / [federated.167juq30we47o81cxcvvu14y3cbj].[:Measure Names])</cols>
       </table>
       <simple-id uuid='{EFDE90D2-A885-4E3D-83B9-BAD0271F254A}' />
     </worksheet>
   </worksheets>
-  <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' name='fraud_auc'>
+  <windows source-height='37'>
+    <window class='worksheet' maximized='true' name='fraud_auc'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -558,13 +528,14 @@
       </cards>
       <simple-id uuid='{9DC06DCF-FCB5-4D62-9EEF-1194AD1B7AB5}' />
     </window>
-    <window class='worksheet' maximized='true' name='fraud_f1'>
+    <window class='worksheet' name='fraud_f1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
+            <card type='measures' />
           </strip>
         </edge>
         <edge name='top'>
@@ -574,11 +545,16 @@
           <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='2147483647'>
-            <card type='title' />
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.167juq30we47o81cxcvvu14y3cbj].[:Measure Names]' type='color' />
           </strip>
         </edge>
       </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
       <simple-id uuid='{85915B02-1E09-4B1D-A272-FCED9BF0338A}' />
     </window>
     <window class='worksheet' name='Sheet 3'>
